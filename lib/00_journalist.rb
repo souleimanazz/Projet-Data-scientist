@@ -68,3 +68,48 @@ end
 puts "Q> Combien contiennent une majuscule ?"
 print "R> "
 puts au_moins_maj(logins)
+
+
+def combien_underscore(list)
+    count=0
+    list.each do |item|
+        count += item.count('_')
+    end
+    return count
+end
+
+puts "Q> Combien y a-t-il de underscore _ dans tous les pseudos confondus ?"
+print "R> "
+puts combien_underscore(logins)
+
+sorted = logins.sort_by {|word| word.downcase}
+puts "Q> Trie la liste de handle par ordre alphabétique."
+puts "R> Pas de réponse litterale mais dans le code tout y est"
+
+
+def handle_plus_courts(list)
+    return_list = []
+    m = list[rand(list.length)].length
+    list.each do |item|
+        if item.length < m
+            m = item.length
+        end
+    end
+    while return_list.length < 50
+        list.each do |item|
+            if item.length == m && return_list.length < 50
+                return_list << item
+            end
+        end
+        m+=1
+    end
+    return return_list
+end
+
+puts "Q> Quels sont les 50 handles les plus courts de ce array ?"
+print "R> "
+print handle_plus_courts(logins)
+
+puts "\nQ> Quelle est la position dans l'array de la personne @epenser ?"
+print "R> "
+puts logins.index("@epenser")
