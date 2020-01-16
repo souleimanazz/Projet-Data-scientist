@@ -85,6 +85,7 @@ puts combien_underscore(logins)
 sorted = logins.sort_by {|word| word.downcase}
 puts "Q> Trie la liste de handle par ordre alphabétique."
 puts "R> Pas de réponse litterale mais dans le code tout y est"
+puts "BONUS> un apercu quand meme : #{sorted.first(10)}"
 
 
 def handle_plus_courts(list)
