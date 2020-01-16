@@ -78,7 +78,7 @@ def process_input(h)
                 repeat=false
             when "5"
                 print "\n"*5
-                puts "Et la devise la plus chère parm celles dont le cours est inférieur à 6000$ est : #{plus_cher_dessous(h)} "
+                puts "Et la devise la plus chère parmi celles dont le cours est inférieur à 6000$ est : #{plus_cher_dessous(h)} "
                 repeat = false
             when "6"
                 repeat = false
