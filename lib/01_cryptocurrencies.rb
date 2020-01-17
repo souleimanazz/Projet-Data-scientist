@@ -15,7 +15,7 @@ end
 
 def plus_petite(hash)
     sorted_hash = hash.sort_by { |k,v| v.delete_prefix("$").to_f }
-    return sorted_hash.first
+    return sorted_hash.first(2)
 end
 
 def combien_coin(hash)
@@ -66,7 +66,7 @@ def process_input(h)
                 repeat = false
             when "2"
                 print "\n"*5
-                puts "La crypto la moins valuée est #{plus_petite(h)[0]} avec une valeur de #{plus_petite(h)[1]}!"
+                puts "Les crypto les moins valuées sont #{plus_petite(h)[0][0]} et #{plus_petite(h)[1][0]} avec une valeur de #{plus_petite(h)[1][1]}!"
                 repeat = false
             when "3"
                 print "\n"*5
